@@ -1,0 +1,78 @@
+
+h4{
+	font-size: 16px;
+	font-weight:500;
+}
+ul li{
+	list-style-type:none;
+	display: list-item;
+	text-align: left;
+}
+a:hover{
+	text-decoration: none;
+}
+input{
+	padding-top:10px;
+}
+.nofloat{
+	clear: both;
+}
+.font-10-gray{
+	font-size: 10px;
+	color: gray;
+}
+.pull-left{
+	float:left;
+}
+.pull-right{
+	float:right;
+}
+.nomargin{
+	padding:0;
+	margin:0;
+}
+.border-bottom-gray{
+	border-bottom: 1px solid #e6e6e6;
+}
+.border-right-gray{
+	border-right: 1px solid #e6e6e6;
+}
+.btn-large{
+	min-width: 120px;
+	min-width: 100px\0;
+	height: 38px;
+	padding: 0 10px;
+	line-height: 38px;
+	font-size: 14px;
+}
+.btn-primary:hover {
+background-color: #4daaff;
+}
+.btn-primary {
+background-color: #59b0ff;
+border: none;
+}
+.btn-block{
+	display: block;
+	width: 100%;
+}
+.display-block{
+	display: block;
+	margin: 10px 0;
+}
+.footer{
+	text-align: center;
+	color: #6e6e6e;
+}
+.footer:after{
+	content: "Copyright @ZGX All Rights Reserved.";
+}
+.form-control{
+	line-height: 16px;
+	padding:10px 10px;
+	font-size: 16px;
+	box-shadow: none;
+	border-color: #e6e6e6;
+	resize:none;
+	height:38px;
+}

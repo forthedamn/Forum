@@ -1,0 +1,67 @@
+html{/*适应不同的浏览器，背景需要对html设置*/
+	
+	background-image:-webkit-linear-gradient(top,#203958,#BCD8E4) ;/**chrome*/
+	background-image:-moz-linear-gradient(top,#203958,#BCD8E4) ;/**firefox*/
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#203958, endColorstr=#BCD8E4);/**ie*/
+}
+body{
+	font-family: "微软雅黑";
+	overflow: hidden;
+	color:#666;
+	text-align: center;
+	background: none;  /*取消掉body的白色背景*/
+}
+h1{
+	color: black;
+}
+h3{
+margin: 45px 0 0;
+font-size: 20px;
+color: #666666;
+}
+ul{
+	position: relative;
+}
+.register-box{
+	width: 714px;
+	height: auto;
+	margin: 100px auto;
+	padding: 50px 0;
+	background: #fff;
+	border: 1px solid #b3b3b3;
+	border-radius: 3px;
+	text-align: center;
+}
+.box-body{
+	width: 390px;
+	margin: 0 auto;
+	padding: 40px;
+}
+.reg-err{
+	line-height: 28px;
+	background: #FFEAEA;
+	border: 1px solid #E5C3C4;
+	color: #CC0000;
+}
+.register-box li{
+	margin-bottom: 15px;
+	position: relative;
+}
+.register-box li span{
+	position: absolute;
+	top: 0;
+	right: -145px;
+	width: 130px;
+	padding: 5px;
+	font-size: 12px;
+	border-radius: 5px;
+	overflow: hidden;
+	text-align: left;
+}
+.reg-err{
+	display:none;
+}
+.reg-tips{
+	border: 1px solid #E5C3C4;
+	display:none;
+}

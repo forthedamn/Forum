@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<!--IE兼容-->
+	<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="not-ie" lang="en">
+<!--<![endif]-->
+<html>	
+<head>
+		<meta charset="UTF-8"/>
+	<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/register.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/basic.css">
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/bootstrap.js"></script>
+	<title><%=title%></title>
+		</head>
+		<body>
+			<div class="register-box">
+				<div class="box-head">
+					<h1 class="logo"><img src="/images/logo.png">Blog</h1>
+					<h3>注册新用户</h3>
+				</div>
+				<div class="box-body">
+					<form>
+						<ul>
+							<li><input class="form-control reg-name" type="text" id="username" placeholder="用户名" tips="请输入一个2-14位的用户名">
+								<span class="reg-err reg-err-name">用户名不符合规则</span>
+								<span class="reg-tips"></span>
+							</li>
+							<li><input class="form-control reg-password" type="password" id="password" placeholder="密码" tips="请输入一个6-16位的密码">
+								<span class="reg-err reg-err-password">密码不符合规则</span>
+								<span class="reg-tips"></span>
+							</li>
+							<li><input class="form-control reg-password password-confirm" type="password" placeholder="确认密码" tips="请再次输入密码">
+								<span class="reg-err reg-err-password">密码确认不符合规则</span>
+								<span class="reg-tips"></span>
+							</li>
+							<li>
+								<label>
+									<input type="checkbox" id="checkbox" >
+									我同意<a href="">用户协议</a>
+								</label>
+								<a href="Login.html" style="margin-left:80px;">已有账号</a>
+							</li>
+							<li>
+								<button class="btn btn-large btn-primary btn-block" action="#" onclick="return false;">注册</button>
+							</li>
+						</ul>
+					</form>
+				</div>
+				<div class="box-footer">
+					<h4>使用第三方账号直接登录</h4>
+					<a href="#" ><img src="/images/weibo.png"></a>
+					<a href="#"><img src="/images/qq.png"></a>
+				</div>
+			</div>
+			<div class="footer">
+			
+			</div>
+		</body>
+</html>
