@@ -76,3 +76,22 @@ border: none;
 	resize:none;
 	height:38px;
 }
+.middle{
+	position: relative;
+	margin:0 auto;
+}
+.pd-10{
+	padding:10px;
+}
+.mg-10{
+	margin:10px;
+}
+.mg-t-50{
+	margin-top: 50px;
+}
+.wd-924{
+	width:924px!important;
+}
+.ht-200{
+	height:200px!important;
+}

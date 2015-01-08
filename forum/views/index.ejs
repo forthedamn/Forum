@@ -26,8 +26,13 @@
 				<input class="form-control search-query" type="text" placeholder="搜索话题"></input><span><i class="icon icon-search"></i></span>
 			</form>
 			<div class="user-nav">
-				<a class="btn btn-primary button" href="/reg">登录</a>
-				<a class="btn btn-success button" href="#">注册</a>
+				<% if(locals.user){ %>
+				 <a class="btn btn-primary button" href="/write">发帖</a>
+				 <a class="btn btn-success button" href="/logout">登出</a>
+				<% } else { %>
+				 <a class="btn btn-primary button" href="/login">登录</a>
+				 <a class="btn btn-success button" href="/reg">注册</a>
+				<% } %>
 			</div>
 			<div class="nofloat"></div>
 		</div>

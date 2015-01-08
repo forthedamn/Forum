@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<!--IE兼容-->
+	<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="not-ie" lang="en">
+<!--<![endif]-->
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+	<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/basic.css">
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/bootstrap.js"></script>
+    <script type="text/javascript" src="/javascripts/login.js"></script>
+	<title>登录</title>
+		</head>
+	<body>
+		<div class="login-box">
+			<div class="login-body">
+				<div class="content pull-left border-right-gray">
+					<h1 class="logo"><img src="/images/logo.png">Blog</h1>
+					<h4>Blog中文网</h4>
+					<span style="color:red"><%= locals.error %></span>
+					<form id="login-form" class="form-group" method="post" action="/login">
+						<ul class="nomargin">
+							<li><input type="text" id="username" name="name" class="form-control" placeholder="邮箱/用户名"></li>
+							<li><input type="password" id="password" name="password" class="form-control" placeholder="密码"></li>
+							<li><label ><input type="checkbox" id="remember" style="color:#333;">记住我</input></label>
+								<a href="#">忘记密码</a>
+								<button type="submit" class="btn btn-large btn-primary pull-right">登录</button>
+							</li>
+						</ul>
+					</form>
+				</div>
+				<div class="side-bar pull-left">
+					<h4>第三方账号登录</h4>
+					<a href="#" class="display-block"><img src="/images/weibo.png"></a>
+					<a href="#" class="display-block"><img src="/images/qq.png"></a>
+				</div>
+				<div class="nofloat"></div>
+				</div>
+				<div class="login-footer">
+					<span>还没有账号？</span>
+					<a href="#">立即注册</a>
+					&nbsp;·&nbsp;
+					<a href="Main.html">游客访问</a>
+				</div>	
+		</div>
+		<div class="footer">
+		
+		</div>
+	</body>
+</html>

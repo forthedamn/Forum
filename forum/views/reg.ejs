@@ -14,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="/stylesheets/basic.css">
     <script src="/javascripts/jquery.js"></script>
     <script src="/javascripts/bootstrap.js"></script>
+    <script src="/javascripts/register.js"></script>
 	<title><%=title%></title>
 		</head>
 		<body>
@@ -23,17 +24,21 @@
 					<h3>注册新用户</h3>
 				</div>
 				<div class="box-body">
-					<form>
+					<form method="post" action='/reg'>
 						<ul>
-							<li><input class="form-control reg-name" type="text" id="username" placeholder="用户名" tips="请输入一个2-14位的用户名">
-								<span class="reg-err reg-err-name">用户名不符合规则</span>
+							<li><input class="form-control reg-name" type="text" id="username" name="name" placeholder="用户名" tips="请输入一个2-14位的用户名" value="<%= locals.usedname %>">
+								<% if (locals.error) { %>
+ 									 <span class="reg-err reg-err-name display-block"><%= locals.error %></span>
+								<% }else{ %>
+									<span class="reg-err reg-err-name">用户名不符合规则</span>
+								<% } %>
 								<span class="reg-tips"></span>
 							</li>
-							<li><input class="form-control reg-password" type="password" id="password" placeholder="密码" tips="请输入一个6-16位的密码">
+							<li><input class="form-control reg-password" type="password" id="password"  name="password" placeholder="密码" tips="请输入一个6-16位的密码">
 								<span class="reg-err reg-err-password">密码不符合规则</span>
 								<span class="reg-tips"></span>
 							</li>
-							<li><input class="form-control reg-password password-confirm" type="password" placeholder="确认密码" tips="请再次输入密码">
+							<li><input class="form-control reg-password password-confirm" type="password" name="password-repeat" placeholder="确认密码" tips="请再次输入密码">
 								<span class="reg-err reg-err-password">密码确认不符合规则</span>
 								<span class="reg-tips"></span>
 							</li>
@@ -45,7 +50,7 @@
 								<a href="Login.html" style="margin-left:80px;">已有账号</a>
 							</li>
 							<li>
-								<button class="btn btn-large btn-primary btn-block" action="#" onclick="return false;">注册</button>
+								<button class="btn btn-large btn-primary btn-block" type="submit" >注册</button>
 							</li>
 						</ul>
 					</form>

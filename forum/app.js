@@ -11,7 +11,6 @@ var bodyParser = require('body-parser');
 var flash = require('connect-flash');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
@@ -40,7 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/reg',routes);
-app.use('/users', users);
+app.use('/login',routes);
+app.use('/write',routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

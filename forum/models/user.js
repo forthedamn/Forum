@@ -33,4 +33,30 @@ User.prototype.save = function(callback){
 			});
 		});
 	});
-}
+};
+
+User.get = function(name,callback){//读取用户信息
+	mongodb.open(function(err,db){
+		if(err){
+			return callback(err);
+		}
+		db.collection('users',function(err, collection){
+			if(err){
+				mongodb.close();
+				return callback(err);
+			}
+			collection.findOne({
+				name:name
+			},function(err,doc){
+				mongodb.close();
+				if(doc){
+					var user = new User(doc); //查找成功
+					callback(err, user);
+				} else {
+					callback(err,null); //查找失败
+				}
+			});
+		});
+	});
+};
+
