@@ -11,7 +11,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 
-	<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+		<link href="/stylesheets/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/basic.css">
     <script src="/javascripts/jquery.js"></script>
@@ -22,25 +22,31 @@
 	<body>
 
 		<div class="header">
-			<form class="navbar-search" action="#" method="post">
+			<form class="navbar-search" action="" method="post">
 				<input class="form-control search-query" type="text" placeholder="搜索话题"></input><span><i class="icon icon-search"></i></span>
 			</form>
 			<div class="user-nav">
-				 <a class="btn btn-primary button" href="#">发帖</a>
-				 <a class="btn btn-success button" href="#">登出</a>
+				 <a class="btn btn-primary button" href="/write">发帖</a>
+				 <a class="btn btn-success button" href="/logout">登出</a>
 		
 			</div>
 			<div class="nofloat"></div>
 		</div>
 		<div class="content">
 			<div class="container">
-				<form class="middle wd-924" method="post" action="/write">
-					<input class="form-control mg-t-50 wd-924" name="title" placeholder="在这里输入题目" type="text">
-					<textarea class="form-control mg-t-50 wd-924 ht-200" name="post">
+				<% posts.forEach(function(post,index){ %>
+				<h2><%= post.title %></h2>
+				<p><%= post.post %></p>
+				<p>作者：<%= post.name %> &nbsp;时间：<%= post.time.minute %></p>
+				<% }) %>
+				<!-- <form class="middle wd-924">
+					<input class="form-control mg-t-50 wd-924" placeholder="在这里输入题目" type="text">
+					<textarea class="form-control mg-t-50 wd-924 ht-200">
 					</textarea>
-					<button class="btn btn-primary mg-t-50" type="submit">发表帖子</button>
-					<button class="btn btn-success mg-t-50" >返  回</button>
-				</form>
+					<button class="btn btn-primary mg-t-50">发表帖子</button>
+					<button class="btn btn-success mg-t-50" href="/">返  回</button>
+				</form> -->
+				<a class="btn btn-success mg-t-50" href="/">返  回</a>
 			</div>
 		</div>
 		<div class="footer">

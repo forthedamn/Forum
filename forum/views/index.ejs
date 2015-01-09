@@ -47,14 +47,16 @@
 						<li><a href="">等待回复</a></li>
 					</ul>
 					<div class="list">
+						<% posts.forEach(function(post,index){ %>
 						<div class="item" data-topic-id>
 							<img src="/images/touxiang.png" alt="">
 							<div class="item-content">
-								<h4><a href="#">题目</a></h4>
-								<p>作者</p>
+								<h4><a href="/article?id=<%= post.id %>"><%=post.title %></a></h4>
+								<p>作者：<%= post.name %>&nbsp; 时间：<%= post.time.minute %></p>
 							</div>
 							<div class="nofloat"></div>
 						</div>
+							<% }) %>
 						<div class="item" data-topic-id>
 							<img src="/images/touxiang.png" alt="">
 							<div class="item-content">
